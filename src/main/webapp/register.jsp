@@ -12,7 +12,7 @@
     <style>
           .a1{font-family: 黑体;font-size: x-large;}
           .a2{width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;}
-          .a3{width: 70px;height: 35px;background: coral;}
+          .a3{width: 70px;height: 35px;background:  coral;}
     </style>
 </head>
 <body bgcolor="#f5f5dc">

@@ -8,27 +8,39 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-<title>Title</title>
-    <style>
-          .a1{font-family: 黑体;font-size: x-large;}
-          .a2{width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;}
-          .a3{width: 70px;height: 35px;background:  coral;}
-    </style>
+    <title>register</title>
 </head>
-<body bgcolor="#f5f5dc">
-<div class="a1"><br/><br/>
-       New User Registration!<br/><br/>
+<body>
+<div>
+    <p>New User Registration</p>
+    <form method="post" action="/2019211001000902WanXinyu_war_exploded/register">
+        <table>
+            <tr>
+                <td width=350px><input style="width: 350px;height: 35px;background: khaki;font-size: large;border:0" type="text" name="username" placeholder="Username" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td><input style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;" type="password" name="Password" placeholder="password" minlength="8"></td>
+            </tr>
+            <tr>
+                <td><input style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;" type="email" name="email" placeholder="Email"></td>
+            </tr>
+            <tr>
+                <td  style="width: 350px; height:35px">Gender:
+                    <input  type="radio" name="sex" value="Male"  >Male
+                    <input  type="radio" name="sex" value="Female" />Female</td>
+            </tr>
+            <tr>
+                <td>
+                    <input style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;" type="date" name="date" placeholder="Date of Birth(yyyy-mm-dd)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input style="color:azure;background: coral;width: 100px; height:35px;border:0" type="submit" name="register" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
 </div>
-       <input type="text" name="username" class="a2" placeholder="Username"><br/><br/>
-       <input type="password" name="password" class="a2" placeholder="password" minlength="8"><br/><br/>
-       <input type="email" name="email" class="a2" placeholder="Email"><br/><br/>
-        <form>
-          Gender:
-          <input name="sex" type="radio" value="Male"/>Male
-          <input name="sex" type="radio" value="Female"/>Female
-        </form>
-        <input type="date" name="birth-data" class="a2" placeholder="Date of Birth(yy-mm-dd)"><br/><br/>
-        <button class="a3">Register</button>
-
 </body>
 </html>

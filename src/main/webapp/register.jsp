@@ -36,7 +36,7 @@
             </tr>
             <tr>
                 <td>
-                    <input  style="color:azure;background: coral;width: 100px; height:35px;border:0" type="submit" name="register" value="Register">
+                    <input style="color:azure;background: coral;width: 100px; height:35px;border:0" type="submit" name="register" value="Register">
                 </td>
             </tr>
         </table>

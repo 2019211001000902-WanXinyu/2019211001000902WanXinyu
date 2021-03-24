@@ -10,7 +10,7 @@ public class LifeCycleServlet  extends HttpServlet {
     }
 
     @Override
-    public  void init(){
+    public  void  init(){
         System.out.println("I am in init() ");
     }
 

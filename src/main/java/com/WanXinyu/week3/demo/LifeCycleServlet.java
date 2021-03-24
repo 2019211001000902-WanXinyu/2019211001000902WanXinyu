@@ -4,9 +4,9 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-public class LifeCycleServlet extends HttpServlet {
+public class LifeCycleServlet  extends HttpServlet {
     public LifeCycleServlet(){
-        System.out.println("I am in constructor--> LifeCycleServlet() ");
+          System.out.println("I am in constructor--> LifeCycleServlet() ");
     }
 
     @Override

@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <servlet>
+   <!-- <servlet>
         <servlet-name>www</servlet-name>
         <servlet-class>com.WanXinyu.week2.demo.HelloWordServlet</servlet-class>
     </servlet>
@@ -15,6 +15,49 @@
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.WanXinyu.week3.demo.RegisterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>JDBCDemoServlet</servlet-name>
+        <servlet-class>com.WanXinyu.week4.demo.JDBCDemoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>JDBCServlet</servlet-name>
+        <servlet-class>com.WanXinyu.week4.demo.JDBCServlet</servlet-class>
+        <init-param>
+            <param-name>driver</param-name>
+            <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:sqlserver://localhost;databaseName=userdb</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>sa</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>111111</param-value>
+        </init-param>
+
+    </servlet>
+    <servlet>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <servlet-class>com.WanXinyu.week4.demo.ConfigDemoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JDBCDemoServlet</servlet-name>
+        <url-pattern>/jdbc</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JDBCServlet</servlet-name>
+        <url-pattern>/jdbc1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+
+
     <servlet-mapping>
     <servlet-name>www</servlet-name>
     <url-pattern>/hello</url-pattern>
@@ -26,5 +69,5 @@
    <servlet-mapping>
        <servlet-name>RegisterServlet</servlet-name>
        <url-pattern>/register</url-pattern>
-   </servlet-mapping>
+   </servlet-mapping>!-->
 </web-app>

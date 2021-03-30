@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td>
-                    <input style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;" type="date" name="date" placeholder="Date of Birth(yyyy-mm-dd)">
+                    <input style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;" type="date" name="birthdate" placeholder="Date of Birth(yyyy-mm-dd)">
                 </td>
             </tr>
             <tr>

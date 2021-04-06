@@ -5,15 +5,10 @@
   Time: 23:33
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-     <title>register</title>
-</head>
-<body>
+<%@include file="header.jsp"%>
 <div>
     <p>New User Registration</p>
-    <form method="post"   action="/2019211001000902WanXinyu_war_exploded/register">
+    <form method="post"    action="/2019211001000902WanXinyu_war_exploded/register">
         <table>
             <tr>
                 <td width=350px><input style="width: 350px;height: 35px;background: khaki;font-size: large;border:0" type="text" name="username" placeholder="Username" autocomplete="off"></td>
@@ -31,7 +26,7 @@
             </tr>
             <tr>
                 <td>
-                    <input style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;" type="date" name="birthdate" placeholder="Date of Birth(yyyy-mm-dd)">
+                    <input style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;" type="text" name="birthdate" placeholder="Date of Birth(yyyy-mm-dd)">
                 </td>
             </tr>
             <tr>
@@ -42,5 +37,4 @@
         </table>
     </form>
 </div>
-</body>
-</html>
+<%@include file="footer.jsp"%>

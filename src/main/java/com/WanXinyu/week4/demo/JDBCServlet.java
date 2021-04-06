@@ -1,4 +1,4 @@
-package com.WanXinyu.week3.demo;
+package com.WanXinyu.week4.demo;
 
 
 import javax.servlet.*;
@@ -7,11 +7,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 
-public class RegisterServlet extends HttpServlet {
+public class JDBCServlet extends HttpServlet {
     Connection con=null;
     @Override
     public void init() throws ServletException {
-        String driver =getServletConfig().getInitParameter("driver");
+        String driver=getServletConfig().getInitParameter("driver");
         String url=getServletConfig().getInitParameter("url");
         String username=getServletConfig().getInitParameter("username");
         String password=getServletConfig().getInitParameter("password");
@@ -42,11 +42,11 @@ public class RegisterServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out=response.getWriter();
         out.println("<table border=1><tr><td>id</td><td>UserName</td><td>Password</td><td>Email</td><td>Gender</td><td>Birthdate</td></tr>");
-        String sql1="select * from usertable";
-        String sql2="insert into usertable(username,password,email,sex,birthdate) values('"+username+"','"+password+"','"+email+"','"+sex+"',"+birthdate+") ";
+        String sql2="select * from usertable";
+        String sql1="insert into usertable(username,password,email,sex,birthdate) values('"+username+"','"+password+"','"+email+"','"+sex+"',"+birthdate+") ";
         try {
 
-            ResultSet rst= con.createStatement().executeQuery(sql2);
+            ResultSet rst= con.createStatement().executeQuery(sql1);
             while(rst.next()){
 
             }
@@ -54,17 +54,16 @@ public class RegisterServlet extends HttpServlet {
             throwables.printStackTrace();
         }
         try {
-            ResultSet rs =  con.createStatement().executeQuery(sql1);
+            ResultSet rs = con.createStatement().executeQuery(sql2);
             while(rs.next()){
-                PrintWriter writer = response.getWriter();
-                writer.println("<tr>");
-                writer.println("<td>"+rs.getString("id")+"</td>");
-                writer.println("<td>"+rs.getString("username")+"</td>");
-                writer.println("<td>"+rs.getString("password")+"</td>");
-                writer.println("<td>"+rs.getString("email")+"</td>");
-                writer.println("<td>"+rs.getString("sex")+"</td>");
-                writer.println("<td>"+rs.getString("birthdate")+"</td>");
-                writer.println("</tr>");
+                out.println("<tr>");
+                out.println("<td>"+rs.getString("id")+"</td>");
+                out.println("<td>"+rs.getString("username")+"</td>");
+                out.println("<td>"+rs.getString("password")+"</td>");
+                out.println("<td>"+rs.getString("email")+"</td>");
+                out.println("<td>"+rs.getString("sex")+"</td>");
+                out.println("<td>"+rs.getString("birthdate")+"</td>");
+                out.println("</tr>");
             }
             out.println("</table>");
             rs.close();

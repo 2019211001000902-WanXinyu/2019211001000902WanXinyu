@@ -19,7 +19,6 @@
 <br/>
 <a href="login.jsp">Login-week5</a>
 
-
 </body>
 </html>
 <%@include file="footer.jsp"%>

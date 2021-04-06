@@ -13,7 +13,6 @@
     }
 %><!---service---->
 
-
 <html>
 <head>
     <title>Life Cycle JSP</title>

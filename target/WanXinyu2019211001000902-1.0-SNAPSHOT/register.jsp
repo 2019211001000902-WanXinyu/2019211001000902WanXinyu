@@ -5,10 +5,10 @@
   Time: 23:33
   To change this template use File | Settings | File Templates.
 --%>
-<%@include file="header.jsp"%>
+<%@include  file="header.jsp"%>
 <div>
     <p>New User Registration</p>
-    <form method="post"   action="/2019211001000902WanXinyu_war_exploded/register">
+    <form method="post"    action="/2019211001000902WanXinyu_war_exploded/register">
         <table>
             <tr>
                 <td width=350px><input style="width: 350px;height: 35px;background: khaki;font-size: large;border:0" type="text" name="username" placeholder="Username" autocomplete="off"></td>

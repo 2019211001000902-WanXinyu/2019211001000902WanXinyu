@@ -5,7 +5,7 @@
   Time: 23:33
   To change this template use File | Settings | File Templates.
 --%>
-<%@include file="header.jsp"%>
+<%@include  file="header.jsp"%>
 <div>
     <p>New User Registration</p>
     <form method="post"    action="/2019211001000902WanXinyu_war_exploded/register">
@@ -17,7 +17,7 @@
                 <td><input style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;"  type="password" name="password" placeholder="password" minlength="8"></td>
             </tr>
             <tr>
-                <td><input style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;" type="email" name="email" placeholder="Email"></td>
+                <td><input  style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;" type="email" name="email" placeholder="Email"></td>
             </tr>
             <tr>
                 <td  style="width: 350px; height:35px">Gender:

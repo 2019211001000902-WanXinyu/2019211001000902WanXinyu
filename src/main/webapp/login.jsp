@@ -26,7 +26,7 @@ if(!(request.getAttribute("massage")==null)){
     </tr>
     <tr>
         <td>
-            Password:<input type="text" name="password">
+             Password:<input type="text" name="password">
         </td>
     </tr>
     <tr>

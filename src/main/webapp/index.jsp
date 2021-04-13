@@ -1,6 +1,6 @@
 <%@include file="header.jsp"%>
 <h2>
-    Welcome to my Online Shop Home Page.
+     Welcome to my Online Shop Home Page.
 </h2>
 <br/>
 <form method="get" target="_blank" action="search">

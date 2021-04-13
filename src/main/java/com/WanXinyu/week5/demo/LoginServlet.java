@@ -18,6 +18,7 @@ public class LoginServlet extends HttpServlet {
         String username = getServletContext().getInitParameter("username");
         String password = getServletContext().getInitParameter("password");
 
+
         try{
             Class.forName(driver);
             con = DriverManager.getConnection(url, username, password);

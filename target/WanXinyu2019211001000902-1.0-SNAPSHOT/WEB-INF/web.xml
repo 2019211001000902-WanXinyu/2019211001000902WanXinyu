@@ -72,6 +72,11 @@
         <servlet-name>ConfigDemoServlet</servlet-name>
         <url-pattern>/config</url-pattern>
     </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
 
 
     <servlet-mapping>
@@ -103,6 +108,7 @@
         <param-name>password</param-name>
         <param-value>111111</param-value>
     </context-param>
+
 
 
 </web-app>

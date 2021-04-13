@@ -7,6 +7,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="header.jsp"%>
+<h1>Login</h1>
+<%
+if(!(request.getAttribute("massage")==null)){
+    //error
+    out.print("<h3>"+request.getAttribute("massage")+"</h3>");
+}
+%>
 <form method="post" action="login">
 <table>
     <tr>

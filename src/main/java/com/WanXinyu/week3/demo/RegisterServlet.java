@@ -11,6 +11,8 @@ public class RegisterServlet extends HttpServlet {
     Connection con=null;
     @Override
     public void init() throws ServletException {
+        super.init();
+        /*ServletContext context=getServletContext();
         String driver =getServletConfig().getInitParameter("driver");
         String url=getServletConfig().getInitParameter("url");
         String username=getServletConfig().getInitParameter("username");
@@ -22,12 +24,14 @@ public class RegisterServlet extends HttpServlet {
             System.out.println("init()-->"+con);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        }
+        }*/
+
+        con= (Connection) getServletContext().getAttribute("con");
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        doPost(request,response);
     }
 
     @Override
@@ -38,7 +42,8 @@ public class RegisterServlet extends HttpServlet {
         String email=request.getParameter("email");
         String sex=request.getParameter("sex");
         String birthdate=request.getParameter("date");
-        request.setCharacterEncoding("UTF-8");
+
+        /*request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out=response.getWriter();
         out.println("<table border=1><tr><td>id</td><td>UserName</td><td>Password</td><td>Email</td><td>Gender</td><td>Birthdate</td></tr>");
@@ -70,6 +75,24 @@ public class RegisterServlet extends HttpServlet {
             rs.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+        }*/
+        try {
+            Statement st=con.createStatement();
+            String sql="insert into Usertable(username,password,email,sex,birthdate)"+
+                    "values('"+username+"','"+password+"','"+email+"','"+sex+"','"+birthdate+"'";
+
+            System.out.println("sql"+sql);
+
+            int n=st.executeUpdate(sql);
+            System.out.println("n-->"+n);
+
+            //after register a new user - user can login
+            response.sendRedirect("login.jsp");
+
+        }catch (SQLException e){
+            e.printStackTrace();
         }
+
+
     }
 }

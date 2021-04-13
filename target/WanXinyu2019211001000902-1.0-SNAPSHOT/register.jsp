@@ -17,7 +17,7 @@
                 <td><input style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;"  type="password" name="password" placeholder="password" minlength="8"></td>
             </tr>
             <tr>
-                <td><input style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;" type="email" name="email" placeholder="Email"></td>
+                <td><input  style="width: 350px;height: 35px;background: khaki; border: 0px;font-size: large;" type="email" name="email" placeholder="Email"></td>
             </tr>
             <tr>
                 <td  style="width: 350px; height:35px">Gender:

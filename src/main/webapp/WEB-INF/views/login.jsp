@@ -11,7 +11,7 @@
 <%
 if(!(request.getAttribute("massage")==null)){
     //error
-    out.print("<h3>"+request.getAttribute("massage")+"</h3>");
+    out.println("<h3>"+request.getAttribute("massage")+"</h3>");
 }
 %>
 <form method="post" action="login">

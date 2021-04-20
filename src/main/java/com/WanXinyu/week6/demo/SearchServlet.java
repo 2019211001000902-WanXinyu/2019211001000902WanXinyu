@@ -22,11 +22,10 @@ public class SearchServlet extends HttpServlet {
         else{
             if("Baidu".equals(search)){ response.sendRedirect("https://www.baidu.com/s?wd="+txt); }//redirect to baidu
 
-            else if ("Bing".equals(search)){ response.sendRedirect("https://cn.bing.com/?scope=web="+txt); }
+            else if ("Bing".equals(search)){ response.sendRedirect("https://cn.bing.com/search?q="+txt); }
 
-            else if("Google".equals(search)){ response.sendRedirect("https://www.google.cn/="+txt); }
+            else if("Google".equals(search)){ response.sendRedirect("https://www.google.com/search?q="+txt); }
         }//end doget
-
 
     }//end class
 

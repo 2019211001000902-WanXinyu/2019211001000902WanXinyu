@@ -18,7 +18,7 @@ import java.util.List;
 public class AddProductServlet extends HttpServlet {
     Connection con=null;
     public void init(){
-        con=(Connection) getServletContext().getAttribute("con");
+         con=(Connection) getServletContext().getAttribute("con");
 
     }
     @Override

@@ -40,7 +40,7 @@
 									<option value="7">BOOKS</option>
 									<option value="8">OTHERS</option>
 										
-										<!-- loop_end -->
+										  <!-- loop_end -->
 										
 										</select>
 				            </div>

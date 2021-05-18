@@ -10,7 +10,7 @@ public class ProductListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path="WEB-INF/views/admin/productList.jsp";
-        request.getRequestDispatcher(path).forward(request,response);
+         request.getRequestDispatcher(path).forward(request,response);
 
     }
 

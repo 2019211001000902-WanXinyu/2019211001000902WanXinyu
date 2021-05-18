@@ -45,7 +45,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="#">Shoes</a></h4>
-								</div>
+								 </div>
 							</div>
 							<!-- loop_end -->
 						</div><!--/category-products-->

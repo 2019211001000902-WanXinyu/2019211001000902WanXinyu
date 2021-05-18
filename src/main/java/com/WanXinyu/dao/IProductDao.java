@@ -9,7 +9,7 @@ import java.util.List;
 
 
 
-public interface IProductDao {
+public  interface IProductDao {
 	/**
 	 * Insert a product
 	 * @return int

@@ -56,6 +56,7 @@ public  class ProductDao implements  IProductDao{
             product.setCategoryId(rs.getInt("CategoryId"));
 
         }
+
         return product;
     }
 

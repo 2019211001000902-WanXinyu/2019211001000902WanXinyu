@@ -54,7 +54,6 @@
 						<!-- loop_start -->
 							<c:forEach var="p" items="${productList}">
 						<div class="col-sm-4 padding-right">
-						
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">

@@ -19,7 +19,6 @@ public class ProductListServlet extends HttpServlet {
         super.init();
         con=(Connection) getServletContext().getAttribute("con");
     }
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ProductDao productDao=new ProductDao();

@@ -65,7 +65,6 @@
 								java.sql.Connection con=(java.sql.Connection)application.getAttribute("con");
 								String catName=Category.findByCategoryId(con,pid);
 							%>
-						
 							<td class="cart_quantity"><%=catName%>></td>
 							
 							<td class="cart_total">

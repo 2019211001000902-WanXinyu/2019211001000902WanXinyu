@@ -29,7 +29,6 @@ public class ProductDetailsServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         try {
 
         if (request.getParameter("id")!=null) {

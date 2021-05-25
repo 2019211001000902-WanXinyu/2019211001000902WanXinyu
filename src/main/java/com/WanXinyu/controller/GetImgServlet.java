@@ -22,6 +22,7 @@ public class GetImgServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
         int id=0;
         if(request.getParameter("id")!=null)
             id=Integer.parseInt(request.getParameter("id"));

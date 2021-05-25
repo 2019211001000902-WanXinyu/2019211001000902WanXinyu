@@ -47,6 +47,7 @@ public class ShopServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         String path="WEB-INF/views/shop.jsp";
         request.getRequestDispatcher(path).forward(request,response);
 

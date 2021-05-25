@@ -8,6 +8,7 @@
 				  <li class="active">Shopping Cart</li>
 				</ol>
 			</div>
+
 			<div class="table-responsive cart_info">
 				<table class="table table-condensed">
 					<thead>

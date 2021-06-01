@@ -35,7 +35,6 @@
         <servlet-name>JDBCDemoServlet</servlet-name>
         <servlet-class>com.WanXinyu.week4.demo.JDBCDemoServlet</servlet-class>
     </servlet>
-
     <servlet>
         <servlet-name>JDBCServlet</servlet-name>
         <servlet-class>com.WanXinyu.week4.demo.JDBCServlet</servlet-class>

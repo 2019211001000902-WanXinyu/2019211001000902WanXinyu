@@ -8,7 +8,7 @@
 		<div class="breadcrumbs">
 				<ol class="breadcrumb">
 				  <li><a href="<%=basePath %>admin/home">Admin</a></li>
-				  <li  class="active">User</li>
+				  <li class="active">User</li>
 				</ol>
 			</div>
 					<div class="col-sm-2">

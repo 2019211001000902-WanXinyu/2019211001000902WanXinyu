@@ -94,7 +94,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>
 						</div>
 					</div>
-
 					<div class="col-md-8 clearfix">
 						<div class="shop-menu clearfix pull-right">
 							<ul class="nav navbar-nav">

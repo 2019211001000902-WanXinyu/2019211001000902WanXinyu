@@ -13,6 +13,7 @@ import java.sql.SQLException;
 @WebServlet(name = "GetImgServlet", value = "/getImg")
 public class GetImgServlet extends HttpServlet {
     Connection con=null;
+
     @Override
     public void init() throws ServletException {
         super.init();

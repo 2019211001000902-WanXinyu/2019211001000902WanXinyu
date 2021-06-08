@@ -8,10 +8,10 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 //@WebServlet(
- //urlPatterns = {"/config"},
+// urlPatterns = {"/config"},
 //initParams = {
- //@WebInitParam(name="name",value="Wan Xinyu"),
- //@WebInitParam(name="studentid",value="2019211001000902"),
+// @WebInitParam(name="name",value="Huang Hanxiao"),
+// @WebInitParam(name="studentid",value="2019211001000901"),
 //},loadOnStartup = 2
 //)
 public class ConfigDemoServlet extends HttpServlet {

@@ -1,5 +1,6 @@
 package com.WanXinyu.model;
 
+import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,8 +12,7 @@ public class Category {
     private int categoryId;
     private String categoryName;
     private String description;
-    private boolean  active;
-
+    private boolean active;
     public Category(){
 
     }
@@ -65,32 +65,30 @@ public class Category {
                 ", active=" + active +
                 '}';
     }
-    public static List<Category> findAllCategory(Connection con) throws SQLException {
+    public  static List<Category> findAllCategory(Connection con) throws SQLException{
         String sql="select * from Category";
         List<Category> list=new ArrayList<Category>();
-        PreparedStatement pt=con.prepareStatement(sql);
+        PreparedStatement pt =con.prepareStatement(sql);
         ResultSet rs=pt.executeQuery();
         while (rs.next()){
             Category c=new Category();
-            c.setCategoryId(rs.getInt("categoryId"));
+            c.setCategoryId(rs.getInt("categoryid"));
             c.setCategoryName(rs.getString("categoryName"));
-            c.setDescription(rs.getString("description"));
+            c.setDescription(rs.getString("Description"));
             list.add(c);
         }
         return list;
-
     }
     public static String findByCategoryId(Connection con,int categoryId) throws SQLException {
-        String sql="select * from Category where CategoryId=?";
-
-        PreparedStatement pt=con.prepareStatement(sql);
+        String sql="select * from Category where categoryId=?";
+        PreparedStatement pt =con.prepareStatement(sql);
         pt.setInt(1,categoryId);
         ResultSet rs=pt.executeQuery();
         String categoryName=null;
         while (rs.next()){
             categoryName=rs.getString("categoryName");
-
         }
         return categoryName;
     }
+
 }

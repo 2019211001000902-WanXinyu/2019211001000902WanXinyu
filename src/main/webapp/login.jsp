@@ -5,35 +5,16 @@
   Time: 17:22
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="header.jsp"%>
 <h1>Login</h1>
 <%
-if(!(request.getAttribute("massage")==null)){
-    //error
-    out.print("<h3>"+request.getAttribute("massage")+"</h3>");
-}
+    if(!(request.getAttribute("message")==null)){
+        out.println(request.getAttribute("message"));
+    }
 %>
-<form method="post" action="login">
-<table>
-    <tr>
-        <td><font  size="10" color="black">Login</font></td>
-    </tr>
-    <tr>
-        <td>
-            Username:<input type="text" name="username" >
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Password:<input type="text" name="password">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input type="submit"  value="Login"/>
-        </td>
-    </tr>
-</table>
+<form method="post" action="/2019211001000902WanXinyu_war_exploded/login">
+    Username:<input style="width: 200px; height:30px" type="text" name="username" autocomplete="off"><br/><br/>
+    Password:<input style="width: 200px; height:30px" type="password" name="password"  minlength="8"><br/><br/>
+    <input style="width: 80px; height:30px" type="submit" name="login" value="login">
 </form>
 <%@include file="footer.jsp"%>

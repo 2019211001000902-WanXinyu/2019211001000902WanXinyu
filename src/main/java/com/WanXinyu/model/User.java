@@ -3,16 +3,29 @@ package com.WanXinyu.model;
 import java.util.Date;
 
 public class User {
-
     private int id;
     private String username;
     private String password;
     private String email;
     private String sex;
     private java.util.Date birthdate;
+    //constructor
 
     public User() {
     }
+    //full
+
+
+    public User(int id, String username, String password, String email, String sex, Date birthdate) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.sex = sex;
+        this.birthdate = birthdate;
+    }
+    //
+
 
     public int getId() {
         return id;
@@ -61,15 +74,7 @@ public class User {
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
     }
-
-    public User(int id, String username, String password, String email, String sex, Date birthdate) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.sex = sex;
-        this.birthdate = birthdate;
-    }
+    //toString
 
     @Override
     public String toString() {

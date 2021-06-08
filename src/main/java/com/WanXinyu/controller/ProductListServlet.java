@@ -14,23 +14,25 @@ import java.util.List;
 @WebServlet(name = "ProductListServlet", value = "/admin/productList")
 public class ProductListServlet extends HttpServlet {
     Connection con=null;
+
     @Override
-    public void init() throws ServletException{
+    public void init() throws ServletException {
         super.init();
         con=(Connection) getServletContext().getAttribute("con");
     }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         ProductDao productDao=new ProductDao();
         try {
             List<Product> productList=productDao.findAll(con);
             request.setAttribute("productList",productList);
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
-        String path="WEB-INF/views/admin/productList.jsp";
-         request.getRequestDispatcher(path).forward(request,response);
-
+        String path="/WEB-INF/views/admin/productList.jsp";
+        request.getRequestDispatcher(path).forward(request,response);
     }
 
     @Override

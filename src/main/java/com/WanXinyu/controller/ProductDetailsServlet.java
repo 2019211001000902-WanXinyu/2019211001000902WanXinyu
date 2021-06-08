@@ -15,35 +15,32 @@ import java.util.List;
 @WebServlet(name = "ProductDetailsServlet", value = "/productDetails")
 public class ProductDetailsServlet extends HttpServlet {
     Connection con=null;
+
     @Override
     public void init() throws ServletException {
         super.init();
         con=(Connection) getServletContext().getAttribute("con");
     }
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             List<Category> categoryList=Category.findAllCategory(con);
             request.setAttribute("categoryList",categoryList);
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         try {
-
-        if (request.getParameter("id")!=null) {
-            int productId = Integer.parseInt(request.getParameter("id"));
-            ProductDao productDao = new ProductDao();
-            Product product = productDao.findById(productId, con);
-            request.setAttribute("p",product);
-        }
-            } catch (SQLException e) {
-                e.printStackTrace();
+            if(request.getParameter("id")!=null) {
+                int productId = Integer.parseInt(request.getParameter("id"));
+                ProductDao productDao = new ProductDao();
+                Product product = productDao.findById(productId, con);
+                request.setAttribute("p",product);
             }
-
-        String path="WEB-INF/views/productDetails.jsp";
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        String path="/WEB-INF/views/productDetails.jsp";
         request.getRequestDispatcher(path).forward(request,response);
-
     }
 
     @Override

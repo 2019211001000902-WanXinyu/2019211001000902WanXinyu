@@ -9,7 +9,7 @@ import java.util.List;
 
 
 
-public  interface IProductDao {
+public interface IProductDao {
 	/**
 	 * Insert a product
 	 * @return int
@@ -39,7 +39,7 @@ public  interface IProductDao {
 	/**
 	 * Select product by price between minprice and maxPrice
 	 * @return List of product
-	*/
+	 */
 	public List<Product> findByPrice(double minPrice, double maxPrice,Connection con) throws SQLException;
 	/**
 	 * Find all products

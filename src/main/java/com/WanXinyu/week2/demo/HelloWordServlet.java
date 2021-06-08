@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
-public class HelloWordServlet extends HttpServlet {
+class HelloWorldServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
         PrintWriter writer=response.getWriter();

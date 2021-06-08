@@ -10,7 +10,7 @@ public class Product {
     private double price;
     private int categoryId;
 
-    public   Product(){}
+    public Product(){}
 
     public Product(int productId, String productName, String productDescription, InputStream picture, double price, int categoryId) {
         this.productId = productId;

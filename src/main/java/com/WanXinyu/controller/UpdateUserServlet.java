@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @WebServlet(name = "UpdateUserServlet", value = "/updateUser")
-public class UpdateUserServlet extends HttpServlet {
+public class UpdateUserServlet extends   HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

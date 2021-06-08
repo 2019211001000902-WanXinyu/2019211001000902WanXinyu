@@ -95,7 +95,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
-        <url-pattern>/login</url-pattern>
+        <url-pattern>/login1</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -157,9 +157,5 @@
     <servlet-name>HomeServlet</servlet-name>
     <url-pattern>/home</url-pattern>
 </servlet-mapping>
-
-
-
-
 
 </web-app>

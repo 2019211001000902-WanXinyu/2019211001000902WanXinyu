@@ -19,6 +19,7 @@ public class AdminOrderList extends HttpServlet {
         super.destroy();
     }
 
+
     public void init() throws ServletException {
         con=(Connection) getServletContext().getAttribute("con");
     }

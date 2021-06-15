@@ -3,6 +3,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
 <script>
+
 	$(document).ready(function() {
 		$('button').click(function() {
 			var t = $(this).attr('id');

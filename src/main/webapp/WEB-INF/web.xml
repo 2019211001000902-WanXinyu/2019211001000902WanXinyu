@@ -158,7 +158,7 @@
         <filter-name>WanXinyuFilter</filter-name>
         <filter-class>com.lab2.WanXinyuFilter</filter-class>
     </filter>
-    
+
     <filter-mapping>
         <filter-name>WanXinyuFilter</filter-name>
         <url-pattern>/lab2/welcome.jsp</url-pattern>
